@@ -1,6 +1,6 @@
 package observer
 
-class StatisticsDisplay(override val weatherData: WeatherData) : Observer, DisplayElement {
+class StatisticsDisplay(private val weatherData: WeatherData) : Observer, DisplayElement {
     private var maxTemp = 0f
     private var minTemp = 200f
     private var tempSum = 0f

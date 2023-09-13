@@ -1,6 +1,6 @@
 package observer
 
-class CurrentConditionDisplay(override val weatherData: WeatherData) : Observer, DisplayElement {
+class CurrentConditionDisplay(private val weatherData: WeatherData) : Observer, DisplayElement {
     private var temperature = 0f
     private var humidity = 0f
 

@@ -1,6 +1,6 @@
 package observer
 
-class ForecastDisplay(override val weatherData: WeatherData) : Observer, DisplayElement {
+class ForecastDisplay(private val weatherData: WeatherData) : Observer, DisplayElement {
     private var currentPressure = 29.92f
     private var lastPressure = 0f
 
