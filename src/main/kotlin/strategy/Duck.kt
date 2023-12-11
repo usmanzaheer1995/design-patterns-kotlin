@@ -84,19 +84,17 @@ class ModelDuck(override var flyBehaviour: FlyBehaviour, override var quackBehav
     }
 }
 
-object DuckStrategy {
-    fun init() {
-        val mallardDuck = MallardDuck(FlyWithWings(), Quack())
-        mallardDuck.display()
-        mallardDuck.performFly()
-        mallardDuck.performQuack()
+fun main() {
+    val mallardDuck = MallardDuck(FlyWithWings(), Quack())
+    mallardDuck.display()
+    mallardDuck.performFly()
+    mallardDuck.performQuack()
 
-        val modelDuck = ModelDuck(FlyNoWay(), MuteQuack())
-        modelDuck.display()
-        modelDuck.performFly()
+    val modelDuck = ModelDuck(FlyNoWay(), MuteQuack())
+    modelDuck.display()
+    modelDuck.performFly()
 
-        modelDuck.flyBehaviour = FlyRocketPowered()
+    modelDuck.flyBehaviour = FlyRocketPowered()
 
-        modelDuck.performFly()
-    }
+    modelDuck.performFly()
 }
